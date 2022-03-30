@@ -28,6 +28,7 @@ body {
   color: #999999;
   scrollbar-color: #3e9cdc #3d4050;
   scrollbar-width: 7px;
+    overflow-x: hidden;
 }
 
 a {
@@ -131,12 +132,12 @@ input#menu__toggle {
     display: none;
 }
 
-.text-info {
+.banner-info {
     margin-top: 103px;
     width: 800px;
 }
 
-.text .block__title {
+.banner .banner-info__title {
     color: #333;
     font-weight: 700;
     font-size: 48px;
@@ -145,11 +146,11 @@ input#menu__toggle {
     text-transform: uppercase;
 }
 
-.block__title span {
+.banner-info__title span {
     color: #43ABF0;
 }
 
-.text .block__text  p{
+.banner .banner-info__text  p{
     margin-top: 80px;
     margin-bottom: 15px;
     color: #333;
@@ -158,20 +159,20 @@ input#menu__toggle {
     line-height: 24px;
 }
 
-.text .block__text ul {
+.banner .banner-info__text ul {
     color: #333;   
     font-size: 20px;
     line-height: 24px;
     padding-left: 15px;
 }
 
-.text .block__text ul li:before {
+.banner .banner-info__text ul li:before {
     content:  "-";
     position: relative;
     left:     -5px;
 }
 
-.text .button {
+.banner .button {
     margin-top: 80px;
 }
 
@@ -196,7 +197,7 @@ input#menu__toggle {
 
 .order {
     width: 100%;
-    height: 920px;
+    padding-bottom: 40px;
     background-color: #272733;
     background-image: url(../img/bg__order.png);
     background-repeat: no-repeat;
@@ -205,12 +206,12 @@ input#menu__toggle {
     /* position: relative; */
 }
 
-.order-block .order-text {
+.order-block .order-info {
     text-align: center;
     padding-top: 120px;
 }
 
-.order-block .block__title { 
+.order-block .order-info__title { 
     color: #fff;
     font-weight: 700;
     font-size: 36px;
@@ -219,12 +220,12 @@ input#menu__toggle {
     text-transform: uppercase;
 }
 
-.order-block .block__text {
+.order-block .order-info__text {
     font-size: 18px;
     padding-top: 30px;
 }
 
-.block__title span {
+.order-block .order-info__title span {
     color: #43ABF0;
 }
 
@@ -317,11 +318,11 @@ input#menu__toggle {
     text-align: left;
   }
   
-  .form__dropdown {
+  .dropdown {
     position: relative;
   }
   
-  .form__dropdown::after {
+  .dropdown::after {
     content: "";
     position: absolute;
     width: 8px;
@@ -335,7 +336,7 @@ input#menu__toggle {
     border-left: none;
   }
   
-  .form__dropdown_open::after {
+  .dropdown_open::after {
     border-color: #fff;
   }
   
@@ -406,7 +407,7 @@ input#menu__toggle {
   }
 
 
-.range-wrap {
+.order-range {
     margin-top: 15px;
     display: flex;
     flex-direction: row;
@@ -420,30 +421,30 @@ input#menu__toggle {
     height: 13px;
 }
 
-.label-range {
+.range-info {
     display: flex;
     justify-content: space-between;
 }
 
-.label-range p {
+.range-info p {
     color: #fff;
     font-size: 20px;
     padding-bottom: 20px;
 }
 
-.input-wrapper {
+.range-attach {
     /* position: relative; */
     margin: 15px 0;
     text-align: center;
   }
    
-  .input__file {
+  .range-attach__input_file {
     opacity: 0;
     visibility: hidden;
     position: absolute;
   }
    
-  .input__file-icon-wrapper {
+  .range-attach__file-icon {
     height: 40px;
     width: 40px;
     display: -webkit-box;
@@ -457,12 +458,12 @@ input#menu__toggle {
     justify-content: center;
   }
    
-  .input__file-button-text {
+  .range-attach__file-button-text {
     line-height: 1;
     margin-top: 1px;
   }
    
-  .input__file-button {
+  .range-attach__file-button {
     width: 370px;
     height: 48px;
     background: #fff;
@@ -483,7 +484,7 @@ input#menu__toggle {
             justify-content: center;
   }
 
-  .input__file-button:hover {
+  .range-attach__file-button:hover {
       background-color: #3E9CDC;
       color: #fff;
       border: 2px solid #fff;
@@ -521,7 +522,7 @@ input#menu__toggle {
     align-items: center;
 }
 
-.info-block {
+.info {
     color: #fff;
     font-size: 13px;
     display: flex;
@@ -531,11 +532,11 @@ input#menu__toggle {
     align-items: center;
 }
 
-.info__text span {
+.info-copy span {
     text-transform: uppercase;
 }
 
-.info__text, .info__pay, .info__social {
+.info-copy, .info-pay, .info-social {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -548,28 +549,28 @@ input#menu__toggle {
     height: 18px;
     background-color: #ffffff;
 }
-.pay__block span {
+.info-pay__block span {
     text-transform: uppercase;
 }
 
-.pay__block, .social__block {
+.info-pay__block, .info-social__block {
     display: flex;
     padding: 0 15px;
 }
 
-.info__pay .pay__block {
+.info-pay .info-pay__block {
     color: #C3C3C3;
 }
 
-.info-block .block__img {
+.info .info-pay__img {
     padding-right: 10px;
 }
 
-.social__block a.link {
+.info-social__block a.link {
     color: #fff;
 }
 
-.social__block a.link:hover {
+.info-social__block a.link:hover {
     color: #43ABF0;
 }
 
@@ -579,14 +580,14 @@ input#menu__toggle {
     header.header {
         height: 700px;       
     }
-    .text .block__title {
+    .banner .banner-info__title {
         font-size: 38px;
     }
-    .text .block__text p {
+    .banner .banner-info__text p {
         font-size: 16px;
     }
 
-    .text .block__text ul {
+    .banner .banner-info__text ul {
         font-size: 16px;
     }
 
@@ -603,11 +604,11 @@ input#menu__toggle {
         font-size: 14px;
     }
     
-    .order-block .block__title {
+    .order-block .banner-info__title {
         font-size: 32px;
     }
 
-    .order-block .block__text {
+    .order-block .order-info__text {
         font-size: 16px;
     }
 
@@ -621,16 +622,16 @@ input#menu__toggle {
         height: 40px;
     }
 
-    .form .form__group .form__dropdown::after {
+    .form .form__group .dropdown::after {
         top: 15px;
     }
 
-    .input-wrapper .input__file-button {
+    .range-attach .range-attach__file-button {
         width: 300px;
         height: 40px;
     }
 
-    .range-slider .label-range p {
+    .range-slider .range-info p {
         font-size: 18px;
     }
 
@@ -638,11 +639,11 @@ input#menu__toggle {
         width: 650px;
     }
 
-    .info__pay .pay__block p {
+    .info-pay .info-pay__block p {
         display: none;
     }
 
-    .info__social .social__block p {
+    .info-social .info-social__block p {
         display: none;
     }
     
@@ -650,17 +651,17 @@ input#menu__toggle {
 
 @media screen and (max-width: 1024px) {
     header.header {
-        height: 680px;       
+        height: 680px;
     }
     
-    .text .block__title {
+    .banner .banner-info__title {
         font-size: 36px;
     }
-    .text .block__text p {
+    .banner .banner-info__text p {
         font-size: 14px;
     }
 
-    .text .block__text ul {
+    .banner .banner-info__text ul {
         font-size: 14px;
     }
 
@@ -677,11 +678,11 @@ input#menu__toggle {
         font-size: 14px;
     }
     
-    .order-block .block__title {
+    .order-block .order-info__title {
         font-size: 32px;
     }
 
-    .order-block .block__text {
+    .order-block .order-info__text {
         font-size: 16px;
     }
 
@@ -694,22 +695,23 @@ input#menu__toggle {
         height: 35px;
     }
 
-    .form .form__group .form__dropdown::after {
+    .form .form__group .dropdown::after {
         top: 14px;
         right: 14px;
     }
 
-    .input-wrapper .input__file-button {
+    .range-attach .range-attach__file-button {
         width: 250px;
         height: 35px;
     }
 
-    .range-slider .label-range p {
+    .range-slider .range-info p {
         font-size: 18px;
     }
 
-    .range-slider input#range {
-        width: 580px;
+    .range-slider  {
+        width: 100%;
+        margin-right: 20px;
     }
 }
 
@@ -717,7 +719,6 @@ input#menu__toggle {
     header.header {
         height: 620px;       
     }
-    
 
     .logo img {
         width: 160px;
@@ -725,19 +726,19 @@ input#menu__toggle {
     ul.menu__box li {
         font-size: 14px;
     }
-    .text-info {
+    .banner-info {
         margin-top: 60px;
         width: 500px;
     }
 
-    .text .block__title {
+    .banner .banner-info__title {
         font-size: 32px;
         width: 550px;
     }
-    .text .block__text p {
+    .banner .banner-info__text p {
         margin-top: 60px;
     }
-    .text .button {
+    .banner .button {
         margin-top: 60px;
     }
 
@@ -758,24 +759,24 @@ input#menu__toggle {
         height: 35px;
     }
 
-    .form .form__group .form__dropdown::after {
+    .form .form__group .dropdown::after {
         top: 14px;
         right: 14px;
     }
 
-    .input-wrapper .input__file-button {
+    .range-attach .range-attach__file-button {
         font-size: 12px;
         width: 230px;
         height: 35px;
     }
 
-    .range-slider .label-range p {
+    .range-slider .range-info p {
         font-size: 14px;
         padding-bottom: 10px;
     }
 
     .range-slider input#range {
-        width: 460px;
+        width: 100%;
     }
 }
 
@@ -873,35 +874,31 @@ input#menu__toggle {
       }
 
 
-    .text-info {
+    .banner-info {
         margin-top: 50px;
         width: 500px;
     }
 
-    .text .block__title {
+    .banner .banner-info__title {
         font-size: 32px;
         width: 550px;
     }
-    .text .block__text p {
+    .banner .banner-info__text p {
         margin-top: 40px;
     }
 
-    .text .button {
+    .banner .button {
         margin-top: 40px;
     }
 
-    .order {
-        height: 650px;
-    }
-
-    .order-block .order-text {
+    .order-block .order-info {
         padding-top: 60px;
     }
-    .order-block .block__title {
+    .order-block .order-info__title {
         font-size: 28px;
     }
     
-    .order-block .block__text {
+    .order-block .order-info__text {
         font-size: 14px;
         padding-top: 10px;
     }
@@ -938,17 +935,22 @@ input#menu__toggle {
         height: 30px;
     }
 
-    .form .form__group .form__dropdown::after {
+    .form .form__group .dropdown::after {
         top: 10px;
         right: 10px;
     }
-    .range-slider input#range {
-        width: 420px;
+
+    .order-block .order-range {
+        display: block;
     }
-    .input-wrapper .input__file-button {
-        font-size: 12px;
-        width: 200px;
-        height: 30px;
+
+    .range-slider input#range {
+        width: 100%;
+    }
+    .range-attach .range-attach__file-button {
+        width: 350px;
+        height: 38px;
+        margin: 0 auto;
     }
 
     .order-button button {
@@ -963,37 +965,34 @@ input#menu__toggle {
     header.header {
         height: 400px;
     }
-    .text-info {
+    .banner-info {
         margin-top: 20px;
         width: 460px;
     }
-    .text .block__title {
+    .banner .banner-info__title {
         font-size: 20px;
         width: 350px;
         line-height: 38px;
     }
-    .text .block__text p {
+    .banner .banner-info__text p {
         margin-top: 10px;
     }
-    .text .button {
+    .banner .button {
         margin-top: 20px;
     }
     .button button {
         width: 150px;
         height: 30px;
     }
-    .order {
-        height: 920px;
-    }
 
-    .order-block .order-text {
+    .order-block .order-info {
         padding-top: 36px;
     }
-    .order-block .block__title {
+    .order-block .order-info__title {
         font-size: 24px;
     }
 
-    .order-block .block__text {
+    .order-block .order-info__text {
         padding-top: 16px;
     }
 
@@ -1042,16 +1041,16 @@ input#menu__toggle {
         height: 48px;
     }
 
-    .form .form__group .form__dropdown::after {
+    .form .form__group .dropdown::after {
         top: 18px;
         right: 18px;
     }
 
-    .order-block .range-wrap {
+    .order-block .range-attach {
         display: block;
     }
 
-    .input-wrapper .input__file-button {
+    .range-attach .range-attach__file-button {
         width: 70%;
         height: 38px;
         margin: 0 auto;
@@ -1062,11 +1061,11 @@ input#menu__toggle {
         height: 38px;
     }
 
-    .info__text p {
+    .info-copy p {
         font-size: 10px;
         line-height: 12px;
     }
-    .info-block .block__img {
+    .info .info-pay__img, .info .info-social__img {
         max-width: 90px;
         padding-right: 0px;
     }
@@ -1078,37 +1077,34 @@ input#menu__toggle {
     header.header {
         height: 400px;
     }
-    .text-info {
+    .banner-info {
         margin-top: 20px;
         width: 460px;
     }
-    .text .block__title {
+    .banner .banner-info__title {
         font-size: 20px;
         width: 350px;
         line-height: 38px;
     }
-    .text .block__text p {
+    .banner .banner-info__text p {
         margin-top: 10px;
     }
-    .text .button {
+    .banner .button {
         margin-top: 20px;
     }
     .button button {
         width: 150px;
         height: 30px;
     }
-    .order {
-        height: 920px;
-    }
 
-    .order-block .order-text {
+    .order-block .order-info {
         padding-top: 36px;
     }
-    .order-block .block__title {
+    .order-block .order-info__title {
         font-size: 24px;
     }
 
-    .order-block .block__text {
+    .order-block .order-info__text {
         padding-top: 16px;
     }
 
@@ -1157,11 +1153,7 @@ input#menu__toggle {
         height: 48px;
     }
 
-    .order-block .range-wrap {
-        display: block;
-    }
-
-    .input-wrapper .input__file-button {
+    .range-attach .range-attach__file-button {
         width: 70%;
         height: 38px;
         margin: 0 auto;
@@ -1172,18 +1164,18 @@ input#menu__toggle {
         height: 38px;
     }
 
-    .info__text p {
+    .info-copy p {
         font-size: 10px;
         line-height: 12px;
     }
-    .info-block .block__img {
+    .info .info-pay__img {
         max-width: 90px;
         padding-right: 0px;
     }
 }
 
 @media screen and (max-width: 430px) {
-    .text .block__text {
+    .banner .banner-info__text {
         width: 370px;
     }
     .range-slider input#range {
@@ -1196,28 +1188,25 @@ input#menu__toggle {
     header.header {
         height: 500px;
     }
-    .text-info {
+    .banner-info {
         margin-top: 20px;
-        width: 460px;
+        width: 100%;
     }
-    .text .block__title {
+    .banner .banner-info__title {
         width: 300px;
         line-height: 30px;
     }
-    .text .block__text {
+    .banner .banner-info__text {
         width: 300px;
     }
-    .text .button {
+    .banner .button {
         margin-top: 20px;
     }
     .button button {
         width: 100px;
         height: 30px;
     }
-    .order {
-        height: 1020px;
-    }
-    .range-slider .label-range p {
+    .range-slider .range-info p {
         font-size: 12px;
     }
     .range-slider input#range {
@@ -1229,7 +1218,7 @@ input#menu__toggle {
         display: block;
     }
 
-    .info-block {
+    .info {
         display: flex;
         flex-wrap: wrap;
         align-content: center;
@@ -1238,11 +1227,11 @@ input#menu__toggle {
         flex-direction: row;
     }
 
-    .info-block .info__text {
+    .info .info-copy {
         margin: 15px 0;
     }
 
-    .info-block .info__line.info__line_small {
+    .info .info__line.info__line_small {
         display: none;
     }
 }

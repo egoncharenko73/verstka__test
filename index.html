@@ -32,13 +32,13 @@
                 </div>
             </div>   
         </div>
-        <div class="text">
+         <div class="banner"> <!--text -->
             <div class="container">
-                <div class="text-info">
-                    <div class="block__title">
+                <div class="banner-info">  <!-- text-info -->
+                    <div class="banner-info__title">  <!--block__title-->
                         <span>Lorem ipsum</span> dolor sit ametconsectetur <span>adipiscing</span>
                     </div>
-                    <div class="block__text">
+                    <div class="banner-info__text"> <!--block__text-->
                         <p>At vero eos et accusamus et iusto odio dignissimos ducimus!</p>
                         <ul>
                             <li>Totam rem aperiam eaque ipsa</li>
@@ -57,11 +57,11 @@
     <div class="order">
         <div class="container">
             <div class="order-block">
-                <div class="order-text">
-                    <div class="block__title">
+                <div class="order-info">   <!--order-text-->
+                    <div class="order-info__title">  <!--block__title-->
                         Оформление  <span>Заказа</span>
                     </div>
-                    <div class="block__text">
+                    <div class="order-info__text">  <!--block__text-->
                         Перед заполнением формы ознакомьтесь с нашей схемой работы!
                     </div>
                 </div>
@@ -111,7 +111,7 @@
                     <form class="form">
                         <div class="form__group">
                             <div class="form__input form__input_mid">
-                                <div class="form__dropdown">
+                                <div class="dropdown">   <!-- form__dropdown -->
                                     <div class="dropdown__button">Выберите тип системы</div>
                                     <div class="dropdown__list-wrap">
                                         <ul class="dropdown__list">
@@ -136,25 +136,32 @@
                         </div>                        
                     </form>
                 </div>
-                <div class="range-wrap">
+                 <div class="order-range">  <!--range-wrap -->
                     <div class="range-slider">
-                        <div class="label-range">
-                            <p>
+                        <div class="range-info">  <!--label-range-->
+                            <p class="range-info__text">
                                 Sed ut perspiciatis, unde omnis iste natus
                             </p>
-                            <p>
-                                <span id="percent">75</span> <span>%</span>
+                            <p class="range-info__text">
+                                <span id="percent" class="range-info__number">75</span> <span class="range-info__number">%</span>
                             </p>
                         </div>
-                        <input id="range" type="range" name="range" min="0" max="100" step="5" value="75" onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)"/>
+                        <input class="range-scroll" id="range" type="range" name="range" min="0" max="100" step="5" value="75" onChange="rangeSlide(this.value)" onmousemove="rangeSlide(this.value)"/>
                     </div>
-                    <div class="input-wrapper">
-                        <input name="file" type="file" name="file" id="input__file" class="input input__file" multiple>
-                        <label for="input__file" class="input__file-button">
-                           <span class="input__file-icon-wrapper"><i class="fa fa-file-text-o" aria-hidden="true"></i></span>
-                           <span class="input__file-button-text">Прикрепить файл</span>
+                    <div class="range-attach">
+                        <input name="file" type="file" name="file" id="input-file" class="range-attach__input range-attach__input_file" multiple>
+                        <label for="input-file" class="range-attach__file-button">
+                           <span class="range-attach__file-icon"><i class="fa fa-file-text-o" aria-hidden="true"></i></span>
+                           <span class="range-attach__file-button-text">Прикрепить файл</span>
                         </label>
                      </div>
+<!--                     <div class="input-wrapper">-->
+<!--                        <input name="file" type="file" name="file" id="input__file" class="input input__file" multiple>-->
+<!--                        <label for="input__file" class="input__file-button">-->
+<!--                           <span class="input__file-icon-wrapper"><i class="fa fa-file-text-o" aria-hidden="true"></i></span>-->
+<!--                           <span class="input__file-button-text">Прикрепить файл</span>-->
+<!--                        </label>-->
+<!--                     </div>-->
                 </div>
                 <div class="order-button">
                     <button>Отправить</button>
@@ -164,37 +171,36 @@
     </div>
     <footer class="footer">
         <div class="container">
-            <div class="info-block">
-                <div class="info__text">
-                    <p>
+            <div class="info">
+                 <div class="info-copy"> <!--info__text -->
+                    <p class="info-copy__text">
                         © 2018 <span>«LoremIpsum.net»</span> Все&nbsp;права защищены.
                     </p>
                 </div>
                 <div class="info__line info__line_small"></div>
-                <div class="info__pay">
-                    <div class="pay__block">
-                        <img src="./img/qiwi.svg" class="block__img">
-                        <p><span>Qiwi</span> wallet</p>
+                <div class="info-pay">
+                    <div class="info-pay__block"> <!--pay__block-->
+                        <img src="./img/qiwi.svg" class="info-pay__img"> <!--block__img-->
+                        <p class="info-pay__text"><span>Qiwi</span> wallet</p>
+                    </div>                    
+                    <div class="info-pay__block"> 
+                        <img src="./img/yandex.svg" class="info-pay__img">
+                        <p class="info-pay__text">Yandex Money</p>
                     </div>
-                    
-                    <div class="pay__block">
-                        <img src="./img/yandex.svg" class="block__img">
-                        <p>Yandex Money</p>
-                    </div>
-                    <div class="pay__block">
-                        <img src="./img/web_money.svg" class="block__img">
-                        <p>Web Money</p>
+                    <div class="info-pay__block">
+                        <img src="./img/web_money.svg" class="info-pay__img">
+                        <p class="info-pay__text">Web Money</p>
                     </div>
                 </div>
                 <div class="info__line"></div>
-                <div class="info__social">
-                    <div class="social__block">
-                        <img src="./img/mail.svg" class="block__img">
-                        <p><a href="#" class="link">info@ipsum228.com</a></p>
+                <div class="info-social">  <!--info__social-->
+                     <div class="info-social__block"> <!--social__block -->
+                        <img src="./img/mail.svg" class="info-social__img">  <!--block__img-->
+                        <p class="info-social__text"><a href="#" class="link">info@ipsum228.com</a></p>
                     </div>
-                    <div class="social__block">
-                        <img src="./img/vk.svg" class="block__img">
-                        <p><a href="#" class="link">Мы вконтакте</a></p>
+                    <div class="info-social__block">
+                        <img src="./img/vk.svg" class="info-social__img">
+                        <p class="info-social__text"><a href="#" class="link">Мы вконтакте</a></p>
                     </div>
                 </div>
             </div>
