@@ -197,7 +197,7 @@ input#menu__toggle {
 
 .order {
     width: 100%;
-    padding-bottom: 40px;
+    padding-bottom: 150px;
     background-color: #272733;
     background-image: url(../img/bg__order.png);
     background-repeat: no-repeat;
@@ -785,7 +785,9 @@ input#menu__toggle {
     header.header {
         height: 560px;       
     }
-    
+    .order {
+        padding-bottom: 40px;
+    }
     ul.menu__box li {
         font-size: 12px;
     }
